@@ -2,7 +2,7 @@ stages:
 - name: build nginx
   steps:
   - publishImageConfig:
-      dockerfilePath: ./docker/nginx-proxy/Dockerfile
+      dockerfilePath: ./Dockerfile
       buildContext: .
       tag: duginginx:latest
       registry: 127.0.0.1:34724
