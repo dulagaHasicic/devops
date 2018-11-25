@@ -1,0 +1,10 @@
+stages:
+- name: build nginx
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./docker/nginx-proxy/Dockerfile
+      buildContext: .
+      tag: DugiNginx:latest
+      pushRemote: true
+      registry: 127.0.0.1:34724
+timeout: 60
